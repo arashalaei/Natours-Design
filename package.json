@@ -1,0 +1,12 @@
+{
+  "name": "Natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass ./sass/main.scss ./css/style.css -w"
+  },
+  "keywords": [],
+  "author": "Arash Alaei",
+  "license": "ISC"
+}
