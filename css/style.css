@@ -37,6 +37,23 @@ body {
     font-weight: 700;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center !important; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -134,3 +151,7 @@ body {
     text-align: center; }
 
 /* Importing pages*/
+.section-about {
+  padding: 20rem 0;
+  background-color: #f7f7f7;
+  margin-top: -20vh; }
