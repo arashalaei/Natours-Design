@@ -1,4 +1,5 @@
 .btn{
+    &,
     &:link,
     &:visited{
         position: relative;
@@ -13,6 +14,7 @@
 
         cursor: pointer;
         outline: none;
+        border: none;
     }
 
     &:hover{
@@ -87,8 +89,7 @@
         transform: translateY(-2px);
     }
 
-    &:active,
-    &:focus{
+    &:active{
         box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: .15);
         transform: translateY(0);
     }
