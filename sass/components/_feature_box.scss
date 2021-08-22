@@ -7,6 +7,12 @@
     text-align: center;
     box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .15);
     transition: transform 0.3s;
+    @include respond(tab-port){
+        padding: 2rem;
+        width: 50%;
+        margin: 0 auto;
+    }
+
     &__icon{
         display: inline-block;
         margin-bottom: .5rem;
@@ -14,6 +20,10 @@
         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;
+        @include respond(tab-port){
+            margin-bottom: 0;
+        }
+
     }
 
     &:hover{
