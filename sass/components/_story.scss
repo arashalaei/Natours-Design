@@ -8,15 +8,35 @@
     transform: skewX(-12deg);
     border-radius: 3px;
 
+    @include respond(tab-port){
+        width: 90%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
+
     &__shape{
         position: relative;
         height: 15rem;
         width: 15rem;
-        transform: translateX(-3rem) skewX(12deg);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         float: left;
+        overflow: hidden;
+        border-radius: 50%;
+        transform: translateX(-3rem) scaleX(12deg);
+        @supports (clip-path: polygon(0 0) or (-webkit-clip-path: polygon(0 0))){
+            transform: translateX(-3rem) skewX(12deg);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        @include respond(phone){
+            transform: translateX(-3rem) skewX(0);
+        }
+
     }
 
     &__img{
@@ -55,5 +75,8 @@
     &__text{
         transform: skewX(12deg);
         font-size: 1.5rem;
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
 }

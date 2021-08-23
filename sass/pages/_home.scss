@@ -39,11 +39,18 @@
 .section-stories{
     position: relative;
     padding: 15rem 0;
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .section-book{
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .book{
@@ -51,11 +58,26 @@
     width: 90%;
     margin: 0 auto;
     background-image: linear-gradient(110deg, rgba($color-white, 0.9) 50%, transparent 50%), url('./../img/nat-10.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
 
+    @include respond(tab-land){
+        background-image: linear-gradient(110deg, rgba($color-white, 0.9) 65%, transparent 65%), url('./../img/nat-10.jpg');
+        background-size: cover;
+    }
+
+    @include respond(tab-port){
+        background-image: linear-gradient(to right, rgba($color-white, 0.9) 0, rgba($color-white, 0.9) 100%), url('./../img/nat-10.jpg');
+        background-size: cover;
+    }
     &__form{
         width: 60%;
         padding: 6rem;
+        @include respond(tab-land){
+            width: 65%;
+        }
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 }
